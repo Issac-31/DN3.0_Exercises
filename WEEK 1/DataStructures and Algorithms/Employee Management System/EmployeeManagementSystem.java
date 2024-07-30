@@ -65,7 +65,7 @@ public class EmployeeManagementSystem {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Choose an option: 1. Add Employee 2. Search Employee 3. Traverse Employees 4. Delete Employee 5. Exit");
+            System.out.println("Choose an option: \n1. Add Employee \n2. Search Employee \n3. Traverse Employees \n4. Delete Employee \n5. Exit");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
 
