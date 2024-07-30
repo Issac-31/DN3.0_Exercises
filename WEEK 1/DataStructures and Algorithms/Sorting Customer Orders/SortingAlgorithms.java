@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class SortingAlgorithms {
 
@@ -8,7 +8,7 @@ public class SortingAlgorithms {
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - 1 - i; j++) {
                 if (orders[j].getTotalPrice() > orders[j + 1].getTotalPrice()) {
-                    // Swap orders[j] and orders[j + 1]
+                    
                     Order temp = orders[j];
                     orders[j] = orders[j + 1];
                     orders[j + 1] = temp;
@@ -32,13 +32,13 @@ public class SortingAlgorithms {
         for (int j = low; j < high; j++) {
             if (orders[j].getTotalPrice() < pivot) {
                 i++;
-                // Swap orders[i] and orders[j]
+                
                 Order temp = orders[i];
                 orders[i] = orders[j];
                 orders[j] = temp;
             }
         }
-        // Swap orders[i + 1] and orders[high] (or pivot)
+
         Order temp = orders[i + 1];
         orders[i + 1] = orders[high];
         orders[high] = temp;
@@ -66,7 +66,7 @@ public class SortingAlgorithms {
             System.out.println(order);
         }
 
-        // Resetting the order list for Quick Sort
+        
         orders = new Order[]{
             new Order("O001", "Alice", 250.0),
             new Order("O002", "Bob", 150.0),
@@ -74,7 +74,7 @@ public class SortingAlgorithms {
             new Order("O004", "Dave", 200.0)
         };
 
-        // Quick Sort
+        
         quickSort(orders, 0, orders.length - 1);
         System.out.println("\nOrder List Sorted by Quick Sort:");
         for (Order order : orders) {
