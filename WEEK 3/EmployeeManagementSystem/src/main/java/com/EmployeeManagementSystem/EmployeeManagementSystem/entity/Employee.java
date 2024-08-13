@@ -6,23 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.NamedQueries;
-import jakarta.persistence.NamedQuery;
 import lombok.Data;
 
 @Entity
 @Data
-@NamedQueries({
-    @NamedQuery(
-        name = "Employee.findByDepartmentId",
-        query = "SELECT e FROM Employee e WHERE e.department.id = :departmentId"
-    ),
-    @NamedQuery(
-        name = "Employee.findByNameContaining",
-        query = "SELECT e FROM Employee e WHERE e.name LIKE %:name%"
-    )
-})
-public class Employee {
+public class Employee extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
