@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookstoreMetrics {
 
+    @SuppressWarnings("unused")
     private final MeterRegistry meterRegistry;
 
     public BookstoreMetrics(MeterRegistry meterRegistry) {
